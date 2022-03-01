@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.экспортироватьВPNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -38,6 +39,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.экспортироватьВJPGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -46,7 +48,9 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.открытьToolStripMenuItem});
+            this.открытьToolStripMenuItem,
+            this.экспортироватьВPNGToolStripMenuItem,
+            this.экспортироватьВJPGToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1135, 24);
@@ -59,6 +63,13 @@
             this.открытьToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.открытьToolStripMenuItem.Text = "Открыть";
             this.открытьToolStripMenuItem.Click += new System.EventHandler(this.открытьToolStripMenuItem_Click);
+            // 
+            // экспортироватьВPNGToolStripMenuItem
+            // 
+            this.экспортироватьВPNGToolStripMenuItem.Name = "экспортироватьВPNGToolStripMenuItem";
+            this.экспортироватьВPNGToolStripMenuItem.Size = new System.Drawing.Size(144, 20);
+            this.экспортироватьВPNGToolStripMenuItem.Text = "Экспортировать в PNG";
+            this.экспортироватьВPNGToolStripMenuItem.Click += new System.EventHandler(this.экспортироватьВPNGToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 
@@ -94,7 +105,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(163, 49);
             this.button1.TabIndex = 5;
-            this.button1.Text = "Наложить размытие";
+            this.button1.Text = "Размытие";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -114,9 +125,16 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(161, 49);
             this.button3.TabIndex = 7;
-            this.button3.Text = "Увеличение резкости";
+            this.button3.Text = "Негатив";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // экспортироватьВJPGToolStripMenuItem
+            // 
+            this.экспортироватьВJPGToolStripMenuItem.Name = "экспортироватьВJPGToolStripMenuItem";
+            this.экспортироватьВJPGToolStripMenuItem.Size = new System.Drawing.Size(139, 20);
+            this.экспортироватьВJPGToolStripMenuItem.Text = "Экспортировать в JPG";
+            this.экспортироватьВJPGToolStripMenuItem.Click += new System.EventHandler(this.экспортироватьВJPGToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -152,6 +170,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ToolStripMenuItem экспортироватьВPNGToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem экспортироватьВJPGToolStripMenuItem;
     }
 }
 
