@@ -127,27 +127,21 @@ namespace Lab1
             }
         }
 
-        private void экспортироватьВPNGToolStripMenuItem_Click(object sender, EventArgs e)
+        private void exportToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
-                Bitmap bmp1 = outputImage.Bitmap;
-                bmp1.Save(@"c:\Users\Alex\Desktop\photo.png", ImageFormat.Png);
-                MessageBox.Show("Успешно","Успешно",MessageBoxButtons.OK,MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+                DialogResult res = saveFileDialog1.ShowDialog();
 
-        private void экспортироватьВJPGToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Bitmap bmp1 = outputImage.Bitmap;
-                bmp1.Save(@"c:\Users\Alex\Desktop\photo.jpg", ImageFormat.Jpeg);
-                MessageBox.Show("Успешно", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (res == DialogResult.OK)
+                {
+                    Bitmap bmp1 = outputImage.Bitmap;
+                    bmp1.Save(saveFileDialog1.FileName, ImageFormat.Png);
+                }
+                else
+                {
+                    MessageBox.Show("Файл не выбран", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
